@@ -1,0 +1,5 @@
+{% for post in site.posts %}
+  {% if {{post.session}} == {{page.death-session}} and {{post.author}} == "Dungeon Master Corbin"%}
+    {{post.url}}
+  {% endif %}
+{% endfor %}

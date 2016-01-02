@@ -1,0 +1,9 @@
+<h2>Session {{include.session}}: {{include.session-name}}</h2>
+
+<ul>
+{% for post in site.posts %}
+	{% if {{post.session}} == {{include.session}} %}
+		<li><a href="{{baseurl}}{{post.url}}">{{post.title}}</a>
+	{% endif %}
+{% endfor %}
+</ul>

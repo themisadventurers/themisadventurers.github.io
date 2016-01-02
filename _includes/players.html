@@ -1,0 +1,7 @@
+{% for page in site.pages %}
+  {% if page.layout == 'player' %}
+    <li>
+      <a href="{{baseurl}}/players/{{page.player}}/">{{page.player}}</a>
+    </li>
+  {% endif %}
+{% endfor %}

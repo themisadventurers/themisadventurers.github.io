@@ -1,0 +1,30 @@
+=========================
+TO DO LIST:
+(not in any particular order at the moment)
+=========================
+
+Tanya / Not Corbin:
+- google map -type interface on world map
+  - add linkable markers
+- finish banner on party page
+- graveyard page banner
+- dropdown icons (beside names)
+- everyone's avatar
+- finish main page banner
+- finish favicon
+- search bar in nav
+- fix mobile responsiveness and mover
+- fix readmore jS
+- draw portrait of everyone for player bio page
+
+Corbin:
+- add "notable sessions" page and appropriate front matter to support it
+- add "IRL updates" page and loop over category: update
+- add actual text to pages
+  - character backgrounds
+  - player backgrounds
+  - about page
+- add "death report" section to character layout
+- add blog type functionality
+  - tweak individual post page layout
+  - sidebar with date/session links

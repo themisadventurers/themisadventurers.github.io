@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="{% if {{page.title}} contains 'The Misadventurers' %}active{% endif %}">
+            <a href="{{baseurl}}/">Home</a>
+          </li>
+          <li class="{% if {{page.url}} contains 'adventure' %}active{% endif %}">
+            <a href="{{baseurl}}/adventure/">Adventure</a>
+          </li>
+          <li class="dropdown {% if {{page.url}} contains 'party' %}active{% endif %}">
+            <a href="{{baseurl}}/party/All/" class="dropdown-toggle disabled" data-toggle="dropdown">Party <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              {% include party.html %}
+            </ul>
+          </li>
+          <li class="dropdown {% if {{page.url}} contains 'graveyard' %}active{% endif %}">
+            <a href="{{baseurl}}/graveyard/All/" class="dropdown-toggle disabled" data-toggle="dropdown">Graveyard <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              {% include graveyard.html %}
+            </ul>
+          </li>
+          <li class="{% if {{page.url}} contains 'about' %}active{% endif %}">
+            <a href="{{baseurl}}/about/">About</a>
+          </li>
+          <li class="dropdown {% if {{page.url}} contains 'players' %}active{% endif %}">
+            <a href="{{baseurl}}/players/All/" class="dropdown-toggle disabled" data-toggle="dropdown">Players <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              {% include players.html %}
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- right justify -->
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+  </nav>

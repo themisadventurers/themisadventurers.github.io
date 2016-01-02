@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'><!--including google fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
+    <title>M&amp;M{% if page.title %} | {{page.title}}{% endif %}</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><!--makes normal dropdown work-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><!--makes normal dropdown work-->
+    <script src="{{baseurl}}/scripts/jquery-2.1.1.min.js"></script><!--also makes sliding dropdown work-->
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"><!--includes glyphicons-->
+    <link rel="stylesheet" type="text/css" href="{{baseurl}}/css/bootstrap.css"><!--our bootstrap theme-->
+    <link rel="stylesheet" type="text/css" href="{{baseurl}}/css/custom.css"><!--our custom css-->
+    <script type='text/javascript' src="{{baseurl}}/scripts/slidingdropdown_parentlink.js"></script><!--sliding dropdown and parent link in dropdown-->
+    <script src="{{baseurl}}/scripts/readmore.min.js"></script><!--expanding a post "read more..." javascript-->
+    <link rel="icon" href="{{baseurl}}/images/favico.png" /><!--favicon image source-->
+
+  </head>
+  <body>
+    <div class="container">
+
+      <header>
+        <div>
+          <a href="{{baseurl}}/"><img src="{{baseurl}}/images/site-banner.png" alt="Site Banner" width="100%"/></a>
+        </div>
+        {% include navbar.html %}
+      </header>
+
+      {{content}}
+      <br />
+
+      <script>
+        $('article').readmore({
+          speed: 1000,
+          maxHeight: 200,
+          heightMargin: 16,
+          moreLink: '<a href="#">Read more...</a>',
+          lessLink: '<a href="#">Read less...</a>'
+        });
+      </script>
+
+      <footer class="pull-right">
+        Contact the <a href="mailto:dungeonmaster@mishapsandmisadventures.com">Dungeon Master</a>.
+      </footer>
+
+    </div>
+  </body>
+</html>

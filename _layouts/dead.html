@@ -1,0 +1,11 @@
+---
+layout: character
+---
+
+  <h1>Death Report</h1>
+  <h4>Cause of Death: {{page.cause-of-death}}</h4>
+  <h4>Famous Last Words: <em>{{page.famous-last-words}}</em></h4>
+  <h4>Death Happened In: <a href="{% include get-death-session.html %}">Session {{page.death-session}}</a></h4>
+  {{page.death-summary}}
+
+{{content}}

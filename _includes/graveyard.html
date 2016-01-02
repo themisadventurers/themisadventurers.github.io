@@ -1,0 +1,7 @@
+{% for page in site.pages %}
+  {% if page.layout == 'dead' %}  
+    <li>
+      <a href="{{baseurl}}/graveyard/{{page.character}}/">{{page.character}}</a>
+    </li>
+  {% endif %}
+{% endfor %}

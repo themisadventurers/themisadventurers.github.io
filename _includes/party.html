@@ -1,0 +1,11 @@
+<li>
+  <a href="{{baseurl}}/party/DM/">DM</a>
+</li>
+<li class="divider"></li>
+{% for page in site.pages %}
+  {% if page.layout == 'alive' %}
+    <li class="">
+      <a href="{{baseurl}}/party/{{page.character}}/">{{page.character}}</a>
+    </li>
+  {% endif %}
+{% endfor %}

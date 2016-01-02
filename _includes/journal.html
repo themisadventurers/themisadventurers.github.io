@@ -1,0 +1,36 @@
+<br />
+<style>
+	.post {
+		border: 1px solid white;
+	}
+</style>
+<h1>Journal Entries</h1>
+
+<ul>
+	{% for journal in site.posts %}
+	{% if {{journal.author}} == {{page.character}} %}
+	<li>
+		<div class="media">
+			<a class="pull-left" href="#">
+				<img class="media-object" height="64px" src="{{baseurl}}/images/avatars/{{journal.author}}.png" alt="Media Object">
+			</a>
+			<div class="media-body">
+				<div class="panel panel-default post">
+					<div class="panel-heading">
+						<h2 class="panel-title"><a href="{{baseurl}}{{journal.url}}">{{journal.title}}</a></h2>
+					</div>
+					<div class="panel-body">
+						<article>
+							{{journal.content}}
+							<br />
+							<br />
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</li>
+	{% endif %}
+	{% endfor %}
+</ul>
